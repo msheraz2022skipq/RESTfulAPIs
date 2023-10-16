@@ -1,0 +1,102 @@
+swagger: "2.0"
+info:
+  description: MOVIE API
+  version: 1.0.0
+  title: A movie API
+host: localhost:8000
+basePath: /api/v1
+schemes:
+  - http
+tags:
+  - name: Movie Details
+    description: Display the details of movie
+
+paths:
+  /movies:
+    get:
+      tags: 
+        - All movies
+      summary: Retrieve all movies
+      security: []
+      responses:
+        '200':
+          description: Successful Operation
+    post:
+      tags:
+        - Create movie
+      summary:
+        Create a new movie
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: Successful Operation
+  /movies/{id}:
+    get:
+      tags: 
+        - All movies
+      summary: Retrieve movies by ID
+      security: []
+      parameters:
+        - name: id
+          in: path
+          description: ID of user that needs to be extracted
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Invalid ID
+        '404':
+          description: user not found
+    delete:
+      tags:
+        - Delete movie
+      summary:
+        Delete a movie by ID
+      description:
+        Deleting a movie by ID
+      parameters:
+        - name: id
+          in: path
+          description: ID of user to be deleted
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '200':
+          description: successful operation
+        '400':
+          description: Invalid ID
+        '404':
+          description: user not found
+    put:
+      tags: 
+        - User
+      summary: Update a movie by ID
+      description: Update movie details based on ID
+      parameters:
+        - in: body
+          name: body
+          description: Update movie object 
+          required: true
+          schema:
+            type: integer
+        - name: id
+          in: path
+          description: ID of movie to be updated
+          required: true
+          type: integer
+          format: int64
+      responses:
+        '201':
+          description: Successful operation
+    
+
+      

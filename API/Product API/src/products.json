@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "name": "LED Monitor",
+        "description": "A monitor for your desktop",
+        "price": 100,
+        "quantity": 1
+    },
+    {
+        "id": 2,
+        "name": "Fridge",
+        "description": "A fridge to store food",
+        "price": 10000,
+        "quantity": 10
+    },
+    {
+        "id": 3,
+        "name": "Optical Mouse",
+        "description": "An optical mouse for your desktops and laptops",
+        "price": 25,
+        "quantity": 1
+    },
+    {
+        "id": 4,
+        "name": "Wireless Keyboard",
+        "description": "A keyboard for your desktop",
+        "price": 45,
+        "quantity": 1
+    }
+    
+]
